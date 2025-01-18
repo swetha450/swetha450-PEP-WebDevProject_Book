@@ -7,8 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    
+    <header>
+        <h1>Book Finder</h1>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <form id="search-form">
+                <div class="form-group">
+                    <input type="text" id="search-input" placeholder="Enter search term..." required>
+                    <select id="search-type">
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="isbn">ISBN</option>
+                    </select>
+                    <button type="submit" id="search-button">Search</button>
+                </div>
+            </form>
+
+            <nav class="filter-controls">
+                <button id="sort-rating">Sort by Rating</button>
+                <div class="filter-group">
+                    <input type="checkbox" id="ebook-filter">
+                    <label for="ebook-filter">Show only eBooks</label>
+                </div>
+            </nav>
+        </section>
+
+        <section class="results-section">
+            <article id="selected-book" class="hidden"></article>
+            <ul id="book-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Google Books API</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
